@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
@@ -5,4 +6,5 @@ module.exports = {
     '\\.css$': require.resolve('./test/style-mock.js'),
   },
   snapshotSerializers: ['jest-emotion'],
+  moduleDirectories: ['node_modules', path.join(__dirname, 'src'), 'shared'],
 }
